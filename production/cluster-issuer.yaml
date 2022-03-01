@@ -4,8 +4,8 @@ metadata:
   name: letsencrypt
 spec:
   acme:
-    email: viktor@farcic.com
-    server: https://acme-v02.api.letsencrypt.org/directory
+    email: me@acme.com
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: letsencrypt
     solvers:
