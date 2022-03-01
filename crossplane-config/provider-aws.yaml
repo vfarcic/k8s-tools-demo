@@ -4,5 +4,7 @@ apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
   name: crossplane-provider-aws
+  annotations:
+    argocd.argoproj.io/sync-wave: "-10"
 spec:
   package: crossplane/provider-aws:v0.22.0
