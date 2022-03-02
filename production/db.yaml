@@ -4,6 +4,8 @@ apiVersion: devopstoolkitseries.com/v1alpha1
 kind: SQL
 metadata:
   name: silly-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "10"
 spec:
   id: silly-demo
   compositionRef:
