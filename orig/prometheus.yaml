@@ -19,13 +19,13 @@ spec:
           ingress:
             enabled: true
             hosts:
-            - alert-manager.34.74.78.103.nip.io
+            - alert-manager.acme.com
             ingressClassName: nginx
         server:
           ingress:
             enabled: true
             hosts:
-            - prometheus.34.74.78.103.nip.io
+            - prometheus.acme.com
             ingressClassName: nginx
   destination:
     server: https://kubernetes.default.svc
