@@ -12,20 +12,20 @@ spec:
   source:
     chart: prometheus
     repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 15.5.2
+    targetRevision: 1.7.1
     helm:
       values: |
         alertmanager:
           ingress:
             enabled: true
             hosts:
-            - alert-manager.34.74.78.103.nip.io
+            - alert-manager.54.204.71.191.nip.io
             ingressClassName: nginx
         server:
           ingress:
             enabled: true
             hosts:
-            - prometheus.34.74.78.103.nip.io
+            - prometheus.54.204.71.191.nip.io
             ingressClassName: nginx
   destination:
     server: https://kubernetes.default.svc

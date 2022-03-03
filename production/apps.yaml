@@ -3,26 +3,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: grafana
+  name: apps
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: production
   source:
-    chart: grafana
-    repoURL: https://grafana.github.io/helm-charts
-    targetRevision: 6.23.0
-    helm:
-      values: |
-        ingress:
-          enabled: true
-          hosts:
-          - grafana.54.204.71.191.nip.io
-          ingressClassName: nginx
+    repoURL: https://github.com/vfarcic/k8s-tools-demo.git
+    targetRevision: HEAD
+    path: apps
   destination:
     server: https://kubernetes.default.svc
-    namespace: monitoring
+    namespace: production
   syncPolicy:
     automated:
       selfHeal: true
