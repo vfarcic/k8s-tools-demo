@@ -35,7 +35,7 @@ metadata:
 spec:
   project: production
   source:
-    repoURL: https://github.com/vfarcic/k8s-tools-demo.git
+    repoURL: https://github.com/vfarcic/k8s-tools-demo
     targetRevision: HEAD
     path: production
   destination:
