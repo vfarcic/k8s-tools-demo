@@ -18,7 +18,7 @@ spec:
         ingress:
           enabled: true
           hosts:
-          - loki.34.239.188.67.nip.io
+          - loki.acme.com
           ingressClassName: nginx
   destination:
     server: https://kubernetes.default.svc
