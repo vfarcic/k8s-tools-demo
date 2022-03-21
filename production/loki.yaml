@@ -13,13 +13,6 @@ spec:
     chart: loki-stack
     repoURL: https://grafana.github.io/helm-charts
     targetRevision: 2.6.1
-    helm:
-      values: |
-        ingress:
-          enabled: true
-          hosts:
-          - loki.34.239.188.67.nip.io
-          ingressClassName: nginx
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
